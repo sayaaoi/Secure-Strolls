@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% block content %}
+        <!-- <h1>Blog home!</h1> -->
+    {% for post in posts %}  <!--posts here is the key in context-->
+        <!-- <h1>{{ post.title }}</h1>    To access variable, use doulbe curl braces; access logic, use percent sign in curl braces
+        <p>By {{ post.author }} on {{ post.date_posted }}</p>
+        <p>{{post.content}}</p> -->
+
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                <a class="mr-2" href="#">{{ post.author }}</a>
+                <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+                </div>
+                <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+                <p class="article-content">{{ post.content }}</p>
+            </div>
+        </article>
+    {% endfor%}
+{% endblock content %}
