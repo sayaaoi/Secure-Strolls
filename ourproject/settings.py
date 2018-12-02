@@ -78,8 +78,13 @@ WSGI_APPLICATION = 'ourproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME':'securestroll_securestroll_db',
+        'USER': 'securestroll_cs411_users',
+        'PASSWORD': 'cs411_users',
+        'HOST':'',
+        'PORT':'',
     }
 }
 
@@ -121,7 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/media'
+MEDIA_URL = '/media/'
 STATICFILES_DIRS = [ BASE_DIR+"/assets", ]
 STATIC_ROOT = '/home/securestroll/public_html/static'
 MEDIA_ROOT = '/home/securestroll/public_html/media'
