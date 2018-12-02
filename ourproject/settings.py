@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ["securestroll.web.illinois.edu","www.securestroll.web.illinois.
 # Application definition
 
 INSTALLED_APPS = [
+    'welcome.apps.WelcomeConfig',
     'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
