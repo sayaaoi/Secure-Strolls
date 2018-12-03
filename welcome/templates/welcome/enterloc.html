@@ -23,7 +23,11 @@
 			</div>
 
 			<div class="col-sm-4">
-				<input type="text" name="startLoc"> <br>					
+				<form method="POST">
+					{% csrf_token %}
+					{{ loc_form.start }}
+				</form>			
+				<!-- <input type="text" name="startLoc"> --> <br>					
 			</div>
 
 			<div class="col-sm-4">
@@ -47,16 +51,44 @@
 			<div class="col-sm-4">
 			</div>
 
-			<div class="col-sm-4">				
-				<input type="text" name="endLoc"><br>
+			<div class="col-sm-4">
+				<form method="POST">
+					{% csrf_token %}
+					{{ loc_form.end }}
+				</form>				
+				<!-- <input type="text" name="endLoc"> --><br>
 			</div>
 
 			<div class="col-sm-4">
-				<input type="submit" value="Submit">
+				<input id="btnn" type="submit" value="Submit">
 			</div>
 		</div>
 
 	</div>
+
+	<p id="jqtest"></p>
+
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+    			$('#btnn').click(function () {
+      			$("#jqtest").html("Oh Yeah!");
+      			});
+    	});
+
+		// $(function () {
+  		
+  // 			var s_loc = {{ loc_form.start }};
+  // 			var e_loc = {{ loc_form.end }};
+  // 				$('input[type=submit]').click(function () {
+  // 					$('#result').html('Test successfully!')
+  // 				})
+  //    		}
+  //  		);
+  		
+	</script>
+
+
 
 	{% for a in test %} 
         <!--{% if a != 1%}-->
@@ -64,6 +96,8 @@
     	<!--{% endif %}-->
 	{% endfor %} 
 {% endblock content %}
+
+
 
 
 
