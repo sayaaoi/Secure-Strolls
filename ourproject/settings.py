@@ -33,7 +33,9 @@ ALLOWED_HOSTS = ["securestroll.web.illinois.edu","www.securestroll.web.illinois.
 
 INSTALLED_APPS = [
     'welcome.apps.WelcomeConfig',
+    'users.apps.UsersConfig',
     'blog.apps.BlogConfig',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -126,6 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [ BASE_DIR+"/assets", ]
 STATIC_ROOT = '/home/securestroll/public_html/static'

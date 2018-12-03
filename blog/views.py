@@ -36,5 +36,5 @@ def home(request):
 #     return HttpResponse('<h1>Blog About</h1>')
 
 def about(request):
-    return render(request, 'blog/about.html', {'title': 'About'})
+	return render(request, 'blog/about.html', {'title': 'About'})
 
