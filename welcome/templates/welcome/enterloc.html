@@ -1,16 +1,9 @@
 {% extends "users/base.html" %}
 {% block content %}
-
-     {% for a in test %} 
-        <!--{% if a != 1%}-->
-    	<p> {{ a }} </p>
-    	<!--{% endif %}-->
-     {% endfor %} 
-
-	<div class="jumbotron text-center">Safe Routes Start Here
-		<img class="rounded-circle" src="{{ user.profile.image.url }}" style="max-width:300px;max-height: 300px" >
-		<p>some text....</p>
+	<div id="text1" class="jumbotron text-center" style="font-size: 150%; color: #0e2f44; font-weight: bold; font-family: "Times New Roman", Times, serif;">Safe Routes Start From Here!
 	</div>
+
+	<p>Please enter the start location and the destination:</p>
 
 	<div class="container">
 		<div class="row">
@@ -30,12 +23,7 @@
 			</div>
 
 			<div class="col-sm-4">
-				<select>
-					<option value="Green Street">Green Street</option>
-					<option value="Clark Street">Clark Street</option>
-					<option value="Pink Street">Pink Street</option>
-					<option value="White Street">White Street</option>
-				</select>
+				<input type="text" name="startLoc"> <br>					
 			</div>
 
 			<div class="col-sm-4">
@@ -59,21 +47,23 @@
 			<div class="col-sm-4">
 			</div>
 
-			<div class="col-sm-4">
-				<select>
-					<option value="Green Street">Green Street</option>
-					<option value="Clark Street">Clark Street</option>
-					<option value="Pink Street">Pink Street</option>
-					<option value="White Street">White Street</option>
-				</select>
+			<div class="col-sm-4">				
+				<input type="text" name="endLoc"><br>
 			</div>
 
 			<div class="col-sm-4">
-				
+				<input type="submit" value="Submit">
 			</div>
 		</div>
 
 	</div>
+
+	{% for a in test %} 
+        <!--{% if a != 1%}-->
+		<p> {{ a }} </p>
+    	<!--{% endif %}-->
+	{% endfor %} 
 {% endblock content %}
-<!-- </body>
-</html> -->
+
+
+
