@@ -133,7 +133,8 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = [ BASE_DIR+"/assets", ]
 STATIC_ROOT = '/home/securestroll/public_html/static'
 MEDIA_ROOT = '/home/securestroll/public_html/media'
-LOGIN_REDIRECT_URL = 'welcome-page'
+LOGIN_REDIRECT_URL = 'profile'
+LOGIN_URL = 'login'
 
 
 
