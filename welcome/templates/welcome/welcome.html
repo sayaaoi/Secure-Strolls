@@ -16,13 +16,17 @@
 	<style>
 		.bgimg {
 			background-image: url("https://cdn.theculturetrip.com/wp-content/uploads/2017/01/sunrise-on-a-paris-street--tommie-hansen-flickr-e1484816402657.jpg");
+			/*-webkit-background-size: cover;
+    		-moz-background-size: cover;
+    		-o-background-size: cover;*/
+    		/*background-size: 1600px 800px;*/
 		}
 	</style>
 
 </head>
 <body>
 	<!-- Header -->
-	<header class="bgimg w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:800px; min-height: 780px" id="home">
+	<header class="bgimg w3-display-container w3-content w3-wide" id="home" style="min-width: 1600px; min-height: 700px">
 		<div class="w3-display-bottomleft w3-padding-large w3-opacity">
 			<h1 class="w3-xxlarge" style="padding-left: 30px;color: #b4d8ee; opacity: 0.9; font-size: 80px">Secure Stroll</h1>
 			<a class="btn btn-primary" style="margin-left: 30px" href="{% url 'welcome-enterlocation' %}">Find the safe route</a>
