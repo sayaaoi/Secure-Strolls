@@ -10,11 +10,27 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	
-	<link href="/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="{% static 'welcome/base.css' %}">
+	<!-- <link href="/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{% static 'welcome/base.css' %}"> -->
+
+	<style>
+		.bgimg {
+			background-image: url("https://cdn.theculturetrip.com/wp-content/uploads/2017/01/sunrise-on-a-paris-street--tommie-hansen-flickr-e1484816402657.jpg");
+		}
+	</style>
+
 </head>
 <body>
-	<h1>Welcome to SecureStrolls!</h1>
-	<a class="btn btn-primary" href="{% url 'welcome-enterlocation' %}">Start</a>
+	<!-- Header -->
+	<header class="bgimg w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:800px; min-height: 780px" id="home">
+		<div class="w3-display-bottomleft w3-padding-large w3-opacity">
+			<h1 class="w3-xxlarge" style="padding-left: 30px;color: #b4d8ee; opacity: 0.9; font-size: 80px">Secure Stroll</h1>
+			<a class="btn btn-primary" style="margin-left: 30px" href="{% url 'welcome-enterlocation' %}">Find the safe route</a>
+		</div>
+	</header>
+
+
+	<!-- <h1>Welcome to SecureStrolls!</h1> -->
+	
 </body>
 </html>
