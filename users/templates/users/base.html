@@ -33,6 +33,7 @@
                         <!-- Navbar Right Side -->
                         <div class="navbar-nav">
                             {% if user.is_authenticated %}
+                                <img class="rounded-circle" src="{{ user.profile.image.url }}" style="max-width:300px;max-height: 300px" >
                                 <a class="nav-item nav-link" href="{% url 'profile'%}">Profile</a>
                                 <a class="nav-item nav-link" href="{% url 'logout'%}">Logout</a>
                             {% else %}
