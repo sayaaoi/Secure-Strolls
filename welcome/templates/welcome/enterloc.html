@@ -23,10 +23,10 @@
 			</div>
 
 			<div class="col-sm-4">
-				<form method="POST">
-					{% csrf_token %}
-					{{ loc_form.start }}
-				</form>			
+				<!-- <form method="POST">-->
+				<!--	{% csrf_token %}-->
+				<!--	{{ loc_form.start }}-->
+				<!--</form>		 -->
 				<!-- <input type="text" name="startLoc"> --> <br>					
 			</div>
 
@@ -52,29 +52,48 @@
 			</div>
 
 			<div class="col-sm-4">
-				<form method="POST">
-					{% csrf_token %}
-					{{ loc_form.end }}
-				</form>				
-				<!-- <input type="text" name="endLoc"> --><br>
+				<!--<form method="POST">-->
+				<!--	{% csrf_token %}-->
+				<!--	{{ loc_form.end }}-->
+					<!--<button type="submit"> Test </button>-->
+				<!--	<button class="btn btn-outline-info" type="submit">SubmitEndLoc</button>-->
+				<!--</form>				-->
+				
+				<form name="loc_form" method="GET" action="/welcome/" >
+				    {% csrf_token %}
+				    -Start Location: <input type="text" name="startloc"><br>
+				    -Destination: <input type="text" name="endloc">
+				    <input type="submit" value="TestSubmit"/>
+				</form><br>
+				
+				{% for a in locs %}
+	            <h2>{{a}}</h2>
+	            {% endfor %}
 			</div>
 
-			<div class="col-sm-4">
-				<input id="btnn" type="submit" value="Submit">
-			</div>
+			<!--<div class="col-sm-4">-->
+			<!--	<input id="btnn" type="submit" value="Submit">-->
+			<!--</div>-->
 		</div>
 
 	</div>
 
+
 	<p id="jqtest"></p>
+	{% for a in startloc %}
+	<h2>{{startloc}}</h2>
+	{% endfor %}
 
 	<script type="text/javascript">
 
-		$(document).ready(function(){
-    			$('#btnn').click(function () {
-      			$("#jqtest").html("Oh Yeah!");
-      			});
-    	});
+// 		$(document).ready(function(){
+// 				var s_loc = 45;
+// 				var e_loc = {{start_loc}}
+
+//     			$('#btnn').click(function () {
+//       			$("#jqtest").html(e_loc);
+//       			});
+//     	});
 
 		// $(function () {
   		
