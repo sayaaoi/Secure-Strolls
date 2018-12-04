@@ -8,17 +8,25 @@
 from django.db import models
 
 
+class Crime(models.Model):
+    crime_type = models.CharField(db_column='Crime_Type', primary_key=True, max_length=255)  # Field name made lowercase.
+    score = models.IntegerField(db_column='Score')  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'Crime'
+
+
 class Incident(models.Model):
     incident_id = models.CharField(db_column='Incident_ID', primary_key=True, max_length=20)  # Field name made lowercase.
     date = models.DateField(db_column='Date')  # Field name made lowercase.
     time = models.TimeField(db_column='Time')  # Field name made lowercase.
     description = models.TextField(db_column='Description', blank=True, null=True)  # Field name made lowercase.
-    crime_type = models.CharField(db_column='Crime_Type', max_length=255)  # Field name made lowercase.
+    crime_type = models.ForeignKey(Crime, models.DO_NOTHING, db_column='Crime_Type')  # Field name made lowercase.
     location_id = models.IntegerField(db_column='Location_ID')  # Field name made lowercase.
-    score = models.FloatField(db_column='Score', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
-        # managed = False
+        managed = False
         db_table = 'INCIDENT'
 
 
@@ -30,7 +38,7 @@ class Location(models.Model):
     zipcode = models.CharField(db_column='ZipCode', max_length=255, blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
-        # managed = False
+        managed = False
         db_table = 'LOCATION'
 
 

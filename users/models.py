@@ -11,23 +11,21 @@ class Profile(models.Model):
 		return f'{self.user.username} Profile'
 
 
-	def save(self):
-		super().save()
+# 	def save(self):
+# 		super().save()
 
-		# resize the upload image
-		img = Image.open(self.image.path)
+# 		# resize the upload image
+# 		img = Image.open(self.image.path)
 
-		# check if image is more than 300 pixel
-		if img.height > 300 or img.width > 300:
-			output_size = (300, 300)
-			img.thumbnail(output_size)
-			img.save(self.image.path)
-
-# Many-to-One relationship between saved routes and user model
-# class SavedRoutes(models.Model):
-# 	user = models.OneToOneField(User, on_delete=models.CASCADE)
-# 	startLoc = models.
-# 	endLoc = models.
+# 		# check if image is more than 300 pixel
+# 		if img.height > 300 or img.width > 300:
+# 			output_size = (300, 300)
+# 			img.thumbnail(output_size)
+# 			img.save(self.image.path)
 
 
-
+			
+			
+			
+			
+			
