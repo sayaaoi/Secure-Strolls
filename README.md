@@ -91,6 +91,7 @@ The register page:
 
 <br>
 The login page:
+
 ![login page](img-md/login-img.png)
 
 ## CHALLENGES FACED
