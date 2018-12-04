@@ -1,5 +1,5 @@
 # Secure-Strolls
-CS411 Final Project
+Database Systems Final Project
 
 ## DESCRIPTION
 
@@ -19,7 +19,7 @@ We have 6 tables in our database: CRIME, INCIDENT, LOCATION, USER, SAVED_ROUTES,
 - The USERS_PROFILE table stores the image of the user along with the user_id which is the primary key of the USER table and the secondary key of this table. The SAVED_ROUTES table stores the start and end locations saved by the user and has the foreign key of user_id to associate the route with the user who saved it.
 
 ## ER Diagram
-Schema:
+**Schema:**
 
 Crime(CrimeType, Score)
 
@@ -33,3 +33,10 @@ Saved_Routes(Route_ID, User_ID, Saved, start_location, end_location, date_search
 
 Users_profile(Profile_ID, User_ID, Image)
 
+<em>We collected the crime data from crimemapping.com and have real user data in the database from 10 developed accounts.
+  
+## FUNCTIONALITY
+Our basic functionality will show the safest route on the map based on users' input of start location and destination by assigning each possible route a score using our safety algorithm. Our advanced functionality allows 1) the user to create an account and log in to save and view their favorite or most used locations and 2) instead of looking at a particular point of location to calculate the score, we look at a section of the street around a radius and calculate the score accordingly.
+
+<br>
+One basic function we have is inserting a route that a logged in user searched for and marked as “save”. This allows us to display a logged in user’s saved routes so they have a reference for their start and end location parameters when they want to search that route again.
