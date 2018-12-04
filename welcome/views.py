@@ -16,6 +16,7 @@ def welcome(request):
 
 def validate_input(start_address, end_address):
     pass
+  
     
 def create_request(start_location, end_location):
     url = "https://maps.googleapis.com/maps/api/directions/json?"
@@ -44,7 +45,6 @@ def create_request(start_location, end_location):
 
 def enterloc(request):
     start=None
-####### Amber added - test idea
     arr = []
     # if request.GET.get('startloc'):
     #     startloc = request.GET.get('startloc')
@@ -54,10 +54,7 @@ def enterloc(request):
     #     arr = [startloc, endloc]
     #     # locs = {'startloc':startloc, 'endloc':endloc}
     # return render(request, 'welcome/enterloc.html', {'locs': arr})
-        
-        # Using Input
-        
-        
+       
     # Using Form
     if request.GET.get('startloc') and request.GET.get('endloc'):             #if request.method == 'POST':
         # loc_form = LocationForm(request.POST)
@@ -73,12 +70,7 @@ def enterloc(request):
     
     # return render(request, 'welcome/enterloc.html', {'locs': arr})
     
-    
-    
-#########################################    
-    
     # validate_input(start_address, end_address)
-    
     
     # req = requests.get(create_request(start_location, end_location))
     
@@ -87,7 +79,6 @@ def enterloc(request):
             rjson = req.json()
             routes = rjson["routes"]
             # 	for route in routes:
-        
             checkarr = list()
             check = -1
             check2 = -1
@@ -153,15 +144,4 @@ def enterloc(request):
 
 def result(request):
     return render(request, 'welcome/result.html')
-
-# def myview(request):
-#   conn = MySQLdb.connect("connection info here")
-#   try:
-#     cursor = conn.cursor()
-#     cursor.execute("select * from Location")
-#     rows = cursor.fetchall()
-#   finally:
-#     conn.close()
-
-#   return render_to_response("welcome/welcome.html", {"rows" : rows})
 
