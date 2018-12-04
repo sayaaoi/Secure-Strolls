@@ -38,7 +38,7 @@ def create_request(start_location, end_location):
     while i < len(end_arr2):
         final_request += "+" + end_arr2[i]
         i += 1
-    final_request += "&key=AIzaSyCUV9mE32gI0uU2CpKcYjPXJbXliyTWrKo"
+    final_request += "&APIKEY"
     return final_request
 
 def enterloc(request):
