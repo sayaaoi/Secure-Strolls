@@ -35,7 +35,6 @@
 			</div>
 
 			<div class="col-sm-4">
-			    <!--{{ warning }}-->
 			<br>					
 			</div>
 
@@ -68,52 +67,11 @@
 				    Save Location (For Signed In Users) <input type="checkbox" name="saved" value="3"/>
 				    <br><input class="btn btn-primary" type="submit" value="Submit" />
 				</form><br>
-				
-				<!--{% for a in locs %}-->
-	   <!--         <h2>{{a}}</h2>-->
-	   <!--         {% endfor %}-->
 			</div>
 		</div>
 
 	</div>
-	
-	<!--<input id = "saved" class="btn btn-primary" type="submit" value="Saved Route" />-->
- <!--   <p id="routes"></p>-->
-	
-<!--	<script type="text/javascript">-->
-<!--	$(document).ready(-->
-<!--    function(){-->
-<!--      $("#jqtest").html("JQuery installed successfully!");-->
-<!--    }-->
-<!--  );-->
-<!--</script>-->
-<!--<p id="jqtest"></p>-->
 
-	<!--{% for a in test %} -->
-	<!--	<p> {{ a }} </p>-->
-	<!--{% endfor %} -->
-	
-	<!--<script src="{% static 'welcome/saveroutes.js' %}">-->
-	<!--    $(function () {-->
-	<!--       $('#saved').click(function (){-->
-	<!--        var route = {{ a.0 }}-->
-	<!--        $('#routes').html(route)-->
-	<!--           $('#routes').html('routes')-->
-	<!--            {% for a in rows_saved %} -->
-	<!--	            <p> {{ a }} </p>-->
-	<!--            {% endfor %} -->
-	<!--            {% for a in last_saved %} -->
-	<!--	            <p> {{ a }} </p>-->
-	<!--	        {% endfor %} -->
-	<!--        }-->
-	<!--    }-->
- <!--   </script>-->
-    <!--<p style="color: #000099">Last saved route: </p>-->
-	<!--{% for a in last_saved %} -->
-		<!--<p> <b>Start Location:</b> {{ last_saved.0 }}  <b>End Location:</b>{{ last_saved.1 }} </p>-->
-		<!--<p> {{last_saved}}</p>	-->
-		<!--{% endfor %} -->
-	<br>
 	
 	<p style="color: #000099">Saved routes (ordered by most reciently searched): </p>
 	{% for a in rows_saved %} 
