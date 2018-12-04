@@ -33,7 +33,7 @@ Saved_Routes(Route_ID, User_ID, Saved, start_location, end_location, date_search
 
 Users_profile(Profile_ID, User_ID, Image)
 
-<em>We collected the crime data from crimemapping.com and have real user data in the database from 10 developed accounts.
+<em>We collected the crime data from [crimemapping.com](www.crimemapping.com) and have real user data in the database from 10 developed accounts.</em>
   
 ## FUNCTIONALITY
 Our basic functionality will show the safest route on the map based on users' input of start location and destination by assigning each possible route a score using our safety algorithm. Our advanced functionality allows 1) the user to create an account and log in to save and view their favorite or most used locations and 2) instead of looking at a particular point of location to calculate the score, we look at a section of the street around a radius and calculate the score accordingly.
