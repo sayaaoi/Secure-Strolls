@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-# from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
@@ -21,12 +20,6 @@ def register(request):
 # Users can only see this page after they log in
 @login_required
 def profile(request):
-    # if request.GET.get('delete') != None:
-    #     current_user = request.user
-    #     cursor = connection.cursor()
-    #     cursor.execute("DELETE FROM auth_user WHERE id = {0};".format(current_user.id))
-    # return render(request, 'users/register.html')
-
     if request.method == 'POST':
         u_form = UserUpdateForm(request.POST, instance=request.user)
         p_form = ProfileUpdateForm(request.POST,
