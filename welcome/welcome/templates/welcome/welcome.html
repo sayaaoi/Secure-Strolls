@@ -7,6 +7,7 @@
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="icon" type="text/css" href="https://static.thenounproject.com/png/14382-200.png">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	
@@ -20,28 +21,33 @@
     		-moz-background-size: cover;
     		-o-background-size: cover;*/
     		/*background-size: 1600px 800px;*/
+    		display: grid;
+            height: 100%;
+            margin: 0;
+            padding: 0;
 		}
 	</style>
 
 </head>
 <body>
 	<!-- Header -->
-	<header class="bgimg w3-display-container w3-content w3-wide" id="home" style="min-width: 1600px; min-height: 700px">
+	<header class="bgimg w3-display-container w3-content w3-wide" id="home" style="min-width: 1600px; min-height: 1000px">
 		<div class="w3-display-bottomleft w3-padding-large w3-opacity">
-			<h1 class="w3-xxlarge" style="padding-left: 30px;color: #b4d8ee; opacity: 0.9; font-size: 80px">Secure Stroll</h1>
-			<a class="btn btn-primary" style="margin-left: 30px" href="{% url 'welcome-enterlocation' %}">Find the safe route</a>
+			<h1 class="w3-xxlarge" style="padding-left: 30px;padding-top:27px;color: #b4d8ee; opacity: 0.9; font-size: 80px">Secure Stroll</h1>
+			<a class="btn btn-primary" style="margin-left: 30px; margin-top:25px" href="{% url 'welcome-enterlocation' %}">Let's go</a>
 		</div>
 	</header>
 
+<!--	<script type="text/javascript" src=""></script>-->
 	<!-- <h1>Welcome to SecureStrolls!</h1> -->
-	<script type="text/javascript">
-	$(document).ready(
-    function(){
-      $("#jqtest").html("JQuery installed successfully!");
-    }
-  );
-</script>
-<p id="jqtest"></p>
+<!--	<script type="text/javascript">-->
+<!--	$(document).ready(-->
+<!--    function(){-->
+<!--      $("#jqtest").html("JQuery installed successfully!");-->
+<!--    }-->
+<!--  );-->
+<!--</script>-->
+<!--<p id="jqtest"></p>-->
 
 
 	

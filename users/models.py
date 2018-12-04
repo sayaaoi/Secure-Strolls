@@ -22,3 +22,12 @@ class Profile(models.Model):
 			output_size = (300, 300)
 			img.thumbnail(output_size)
 			img.save(self.image.path)
+
+# Many-to-One relationship between saved routes and user model
+# class SavedRoutes(models.Model):
+# 	user = models.OneToOneField(User, on_delete=models.CASCADE)
+# 	startLoc = models.
+# 	endLoc = models.
+
+
+

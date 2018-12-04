@@ -13,7 +13,7 @@ def register(request):
 			messages.success(request, f'Your account has been created! You are now able to log in')
 			return redirect('login')
 	else:
-		form = UserRegisterForm()
+		form = LocationForm()
 	return render(request, 'users/register.html', {'form': form})
 
 # Users can only see this page after they log in

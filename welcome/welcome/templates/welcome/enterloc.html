@@ -1,5 +1,16 @@
 {% extends "users/base.html" %}
 {% block content %}
+    <style>
+        input[type=text] {
+            border: 1px solid #555;
+            font-size: 17px;
+        }
+
+        input[type=text]:focus {
+            background-color: lightblue;
+        }
+    </style>
+
 	<div id="text1" class="jumbotron text-center" style="font-size: 150%; color: #0e2f44; font-weight: bold; font-family: "Times New Roman", Times, serif;">Safe Routes Start From Here!
 	</div>
 
@@ -23,6 +34,7 @@
 			</div>
 
 			<div class="col-sm-4">
+			    <!--{{ warning }}-->
 			<br>					
 			</div>
 
@@ -50,9 +62,10 @@
 			<div class="col-sm-4">
 				<form name="loc_form" method="GET" action="/welcome/" >
 				    {% csrf_token %}
-				    Start Location: <input type="text" name="startloc"><br>
-				    Destination: <input type="text" name="endloc"><br>
-				    <br><input type="submit" value="Submit"/>
+				    Start Location: <input type="text" name="startloc" style="border-radius: 5px;"><br>
+				    Destination: <input type="text" name="endloc" style="border-radius: 5px;"><br><br>
+				    Save Location (For Signed In Users) <input type="checkbox" name="saved" value="3"/>
+				    <br><input class="btn btn-primary" type="submit" value="Submit" />
 				</form><br>
 				
 				{% for a in locs %}

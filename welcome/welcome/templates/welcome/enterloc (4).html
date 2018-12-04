@@ -1,0 +1,80 @@
+{% extends "users/base.html" %}
+	<!-- <style>
+		#text1 {
+			font-size: 150%;
+			color: #0e2f44;
+		}
+
+	</style> -->
+
+{% block content %}
+	<div id="text1" class="jumbotron text-center" style="font-size: 150%; color: #0e2f44; font-weight: bold; font-family: "Times New Roman", Times, serif;">Safe Routes Start From Here!
+	</div>
+
+	<p>Please enter the start location and the destination:</p>
+	<form name = "form" action = "{% url "welcome.views" %}"
+         method = "POST" >{% csrf_token %}
+				 <div class="container">
+			 		<div class="row">
+			 			<div class="col-sm-4">
+			 			</div>
+
+			 			<div class="col-sm-4">
+			 				Start location
+			 			</div>
+
+			 			<div class="col-sm-4">
+			 			</div>
+			 		</div>
+
+			 		<div class="row">
+			 			<div class="col-sm-4">
+			 			</div>
+
+			 			<div class="col-sm-4">
+			 				<input type="text" name="startLoc"> <br>
+			 			</div>
+
+			 			<div class="col-sm-4">
+
+			 			</div>
+			 		</div>
+
+			 		<div class="row">
+			 			<div class="col-sm-4">
+			 			</div>
+
+			 			<div class="col-sm-4">
+			 				Destination
+			 			</div>
+
+			 			<div class="col-sm-4">
+			 			</div>
+			 		</div>
+
+			 		<div class="row">
+			 			<div class="col-sm-4">
+			 			</div>
+
+			 			<div class="col-sm-4">
+			 				<input type="text" name="endLoc"><br>
+			 			</div>
+
+			 			<div class="col-sm-4">
+			 				<input type="submit" value="Submit">
+			 			</div>
+			 		</div>
+
+			 	</div>
+	</form>
+
+
+
+	{% for a in test %}
+        <!--{% if a != 1%}-->
+		<p> {{ a }} </p>
+    	<!--{% endif %}-->
+	{% endfor %}
+{% endblock content %}
+<!-- </body>
+</html> -->
