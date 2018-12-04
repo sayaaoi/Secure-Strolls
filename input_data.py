@@ -1,3 +1,6 @@
+# Code used to parse and clean crime incident data (csv format), 
+# and use Geocoding API to generate latitude and longitude from street addesses
+
 import glob
 import argparse
 import os, sys
