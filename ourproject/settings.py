@@ -34,7 +34,6 @@ ALLOWED_HOSTS = ["securestroll.web.illinois.edu","www.securestroll.web.illinois.
 INSTALLED_APPS = [
     'welcome.apps.WelcomeConfig',
     'users.apps.UsersConfig',
-    'blog.apps.BlogConfig',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -81,7 +80,6 @@ WSGI_APPLICATION = 'ourproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'NAME':'securestroll_securestroll_db',
         'USER': 'securestroll_cs411_users',
         'PASSWORD': 'cs411_users',
@@ -135,11 +133,4 @@ STATIC_ROOT = '/home/securestroll/public_html/static'
 MEDIA_ROOT = '/home/securestroll/public_html/media'
 LOGIN_REDIRECT_URL = 'profile'
 LOGIN_URL = 'login'
-
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 
-# EMAIL_HOST_PASSWORD = 
 
