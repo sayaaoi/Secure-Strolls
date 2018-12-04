@@ -1,5 +1,7 @@
 # Secure-Strolls
 Database Systems Final Project
+### Group Members
+Yuejun Wu; Renuka Nannapaneni; Rati Rastogi; Michael Racine
 
 ## DESCRIPTION
 
