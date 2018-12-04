@@ -75,7 +75,7 @@ def enterloc(request):
     # req = requests.get(create_request(start_location, end_location))
     
             req = requests.get(
-                "https://maps.googleapis.com/maps/api/directions/json?mode=walking&alternatives=true&origin=202+E+White+St+Champaign+IL&destination=1010+W+Springfield+Ave+Urbana+IL&key=AIzaSyCUV9mE32gI0uU2CpKcYjPXJbXliyTWrKo")
+                )
             rjson = req.json()
             routes = rjson["routes"]
             # 	for route in routes:
