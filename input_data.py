@@ -1,12 +1,9 @@
 # Code used to parse and clean crime incident data (csv format), 
 # and use Geocoding API to generate latitude and longitude from street addesses
 
-import glob
 import argparse
 import os, sys
 import re
-WORD = re.compile(r"[^(|,|'|\s|)]+")
-#WORD = re.compile(r"[\w+-/]+")
 import subprocess
 import csv
 import requests
@@ -16,8 +13,8 @@ if __name__ == '__main__':
 
     # Get input/output files from user
     parser = argparse.ArgumentParser()
-    parser.add_argument('input_file', help='File to load Amazon review data from')
-    parser.add_argument('output_file', help='File to load Amazon review data from')
+    parser.add_argument('input_file', help='raw data from crime website')
+    parser.add_argument('output_file', help='csv formatted data with lat and long data added')
 
 
     args = parser.parse_args()
@@ -46,7 +43,6 @@ if __name__ == '__main__':
             date = date_time[0]
             date_s = date.split("/")
             date_string = date_s[2]+"-"+date_s[1]+"-"+date_s[0]
-            # date_t = date(int(date_s[0]), int(date_s[1]), int(date_s[2])).isoformat()
 
             time = str(date_time[1])+ ":00"
 
