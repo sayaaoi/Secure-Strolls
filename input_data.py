@@ -11,8 +11,7 @@ import subprocess
 import csv
 import requests
 
-key = "AIzaSyCUV9mE32gI0uU2CpKcYjPXJbXliyTWrKo"
-
+key = 
 if __name__ == '__main__':
 
     # Get input/output files from user
