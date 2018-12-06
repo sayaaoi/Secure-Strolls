@@ -157,7 +157,7 @@ def enterloc(request):
 
                 return TemplateResponse(request, 'welcome/result.html', {"test":routeText, "rows_saved": rows_saved})
            
-    exept:
+    except:
         loc_form = LocationForm()
     return TemplateResponse(request, 'welcome/enterloc.html',"rows_saved": rows_saved})
     
